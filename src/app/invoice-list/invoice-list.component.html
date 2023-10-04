@@ -1,0 +1,13 @@
+<div class="border m-2" *ngFor="let f of list; index as i">
+  <ul>
+    <li>
+      Facture: {{ i }}
+      <!--<a [routerLink]="['/invoice', f.idFacture, f.active]">Details</a>-->
+      <a
+        [routerLink]="['/invoice']"
+        [queryParams]="{ id: f.idFacture, active: f.active }"
+        >Details</a
+      >
+    </li>
+  </ul>
+</div>
